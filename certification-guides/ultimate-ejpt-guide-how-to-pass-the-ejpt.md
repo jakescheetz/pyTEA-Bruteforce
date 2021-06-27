@@ -75,11 +75,76 @@ I recommend creating directories for the results of nmap scans and utilizing the
 mkdir ./nmap
 ```
 
-nmap \(quick\) 
+**nmap \(initial\)** 
 
 ```bash
-nmap -sC -sV x.x.x.x -oN ./nmap/quick
+nmap -sC -sV -v3 x.x.x.x -oN ./nmap/initial
 ```
+
+* useful to get a good quick picture of the machine and see if there are any services running on some common ports
+
+**nmap \(full\)** 
+
+```bash
+nmap -p- -v3 -A x.x.x.x -oN ./nmap/full
+```
+
+* useful to see anything that is running on a non-standard port
+  * remember you can put any service on any port
+  * ex. SSH does not have be running on port 22, it could very well be on port 4444
+
+**nmap \(udp\)**
+
+```bash
+nmap -p- -sU -sV -sC -v3 x.x.x.x -oN ./nmap/udp
+```
+
+* You're also going to want to make sure all of your bases are covered and you can ensure nothing important is open on UDP as well
+
+**nmap \(OS detection\)**
+
+```bash
+nmap -O -Pn -v3 x.x.x.x -oN ./nmap/os
+```
+
+* If you've already performed the other scans, the full scans should try to identify the host OS but sometimes it's worth a shot to just run a dedicated OS identification scan
+
+**fping**
+
+```bash
+fping -a -g x.x.x.0/24 2>/dev/null
+```
+
+* performing a ping sweep to identify hosts on the network
+
+#### Web Attacks
+
+You're almost certainly guaranteed to come across some form of web based application that can be attacked in this exam. Web applications are also one of the biggest attack surfaces in the real world as well, so begining to understand the concept of working with web technologies will serve you well. I highly recommend taking your time to work through this section of the course and become comfortable with the material and then revisiting it again once you're familiar with the terminology being used. 
+
+**Hidden directory enumeration**
+
+while the course introduces dirb and dirbuster- I would recommend gobuster or dirsearch. dirbuster is fine if you like a GUI but dirsearch will give you basically the same results and, in my opinion, is easier to use. Check it out here: [https://github.com/maurosoria/dirsearch](https://github.com/maurosoria/dirsearch)
+
+**Dirsearch**
+
+```bash
+python3 dirsearch.py -u <URL> -e <EXTENSIONS>
+```
+
+* quickly find the paths to hidden files, directories, etc on a domain
+* I recommend looing for php, old, or conf extensions initially
+
+**gobuster**
+
+```bash
+gobuster dir <url> -w <wordlist>
+```
+
+* gobuster is another fan favorite that is notorious for being quick
+
+ **Banner Grabbing**
+
+\*\*\*\*
 
 
 
