@@ -8,6 +8,7 @@
 
 ## Certification Guides
 
+* [Ultimate Security+ Guide; how to pass the Security+](certification-guides/ultimate-security+-guide-how-to-pass-the-security+.md)
 * [Ultimate eJPT Guide; how to pass the eJPT](certification-guides/ultimate-ejpt-guide-how-to-pass-the-ejpt/README.md)
   * [System Attacks](certification-guides/ultimate-ejpt-guide-how-to-pass-the-ejpt/system-attacks.md)
   * [Networking](certification-guides/ultimate-ejpt-guide-how-to-pass-the-ejpt/networking.md)

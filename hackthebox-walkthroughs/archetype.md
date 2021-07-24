@@ -9,7 +9,7 @@ description: >-
 
 ## Enumeration
 
-I always start boxes wiwitha th an
+I always start boxes with some basic nmap scans to get a basic idea of what ports may be open and what daemons might be on those ports. 
 
 
 
