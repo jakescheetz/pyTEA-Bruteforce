@@ -15,7 +15,7 @@ My name is Jacob Scheetz- I am a cyber security enthusiast that enjoys tinkering
 * Currently reside in the top 1% on TryHackMe
 * Worked in network traffic exploitation research for the National Air and Space Intelligence Committee
 * Worked on a Cyber Security Incident Response Team for 2 years & then specifically in Digital Forensics for 3 months
-* Graduated college with a B.S. in Computer information Systems with a certificate in cyber security
+* Graduated college with a B.S. in Computer information Systems and a certificate in cyber security
 
 ![](.gitbook/assets/image%20%283%29.png)
 
